@@ -9,7 +9,7 @@ import json
 class ImportNamespaceFromComposerCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         # Filename to namespace
-        projectPath = sublime.active_window().project_data()['settings']['importNamespaceFromComposer']['project_path']
+        projectPath = sublime.active_window().project_data()['importNamespaceFromComposer']['project_path']
         filename = self.view.file_name().replace(projectPath, '')
         if filename.startswith('/'):
             filename = filename[1:]
